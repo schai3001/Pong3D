@@ -439,6 +439,38 @@ function update() {
       winnerElement.textContent = `Player2 Wins !`;
       win = false;
     }
+
+    // let data = {
+    //   'opponent': 'CPU',
+    //   'win': win,
+    //   'my_score': score1,
+    //   'opponent_score': score2,
+    // };
+
+    // (async () => {
+    //   try {
+    //     let csrfToken = await getCSRFToken();
+    //     let jwtToken = localStorage.getItem('jwtToken');
+    //     const response = await fetch('/api/game_end/', {
+    //       method: 'POST',
+    //       headers: {
+    //         'Authorization': `Bearer ${jwtToken}`,
+    //         'X-CSRFToken': csrfToken,
+    //         'Content-Type': 'application/json',
+    //       },
+    //       credentials: 'include',
+    //       body: JSON.stringify(data),
+    //     });
+
+    //     const respdata = await response.json();
+    //     if (!response.ok)
+    //       console.error(respdata.error);
+    //   } catch (error) {
+    //     console.error('Error during fetching:', error);
+    //   }
+    // })();
+    // return;
+
   }
   requestAnimationFrame(update);
 }
